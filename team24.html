@@ -1,0 +1,1152 @@
+<!DOCTYPE html><html class="no-js" lang="en"><head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="UTF-8">
+    <title>Kshamta | SRF</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="images/black1.png" type="image/x-icon">
+    <link rel="icon" href="images/black1.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- --------styles---------- -->
+    <style>
+      h3 {
+        font-family: "Nunito", sans-serif;
+      }
+      h4 {
+        color: black;
+      }
+      body {
+  background: linear-gradient(to bottom, #0b1d3a, #123c69, #1d4e89, #226ba0, #2b88c1);
+  color: white;
+}
+
+
+
+      @font-face {
+        font-family: "Samarkan";
+        src: url("fonts/SAMAN___.TTF") format("truetype");
+      }
+      @font-face {
+        font-family: "Exo";
+        src: url(fonts/Exo2.0-Medium.otf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 80rem;
+        text-align: center;
+        margin-top: 120px;
+      }
+      .cols {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      /* Individual column style */
+      .col {
+        width: calc(20% - 2rem);
+        margin: 3rem 3rem 0 3rem;
+        cursor: pointer;
+      }
+      /* Styles for the main container holding profile cards */
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 200px;
+      }
+
+      /* Styles for individual profile cards */
+      .profile-card {
+        position: relative;
+        font-family: sans-serif;
+        width: 220px;
+        height: 220px;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 20%;
+        box-shadow: 0 0 22px #3336;
+        transition: 0.6s;
+        margin: 0px;
+      }
+
+      /* Hover effect on profile cards */
+      .profile-card:hover {
+        border-radius: 10px;
+        height: 260px;
+      }
+
+      /* Styles for the profile image within a card */
+      .profile-card .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.6s;
+        z-index: 99;
+      }
+
+      /* Hover effect on the profile image */
+      .profile-card:hover .img {
+        transform: translateY(-60px);
+      }
+
+      /* Styles for the actual image inside the profile image container */
+      .img img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 22px #3336;
+        transition: 0.6s;
+      }
+
+      /* Hover effect on the image inside the profile card */
+      .profile-card:hover img {
+        border-radius: 10px;
+      }
+
+      /* Styles for the caption (name, role, and social links) on a profile card */
+      .caption {
+        text-align: center;
+        transform: translateY(-80px);
+        opacity: 0;
+        transition: 0.6s;
+      }
+
+      /* Hover effect on the caption */
+      .profile-card:hover .caption {
+        margin-top: 2px;
+        opacity: 1;
+      }
+
+      /* Styles for the name in the caption */
+      .caption h3 {
+        font-size: 21px;
+        font-family: sans-serif;
+      }
+
+      /* Styles for the role in the caption */
+      .caption p {
+        font-size: 15px;
+        color: #0c52a1;
+        font-family: sans-serif;
+        margin: 2px 0 9px 0;
+      }
+
+      /* Styles for social links in the caption */
+      .caption .social-links a {
+        color: #333;
+        margin-right: 15px;
+        font-size: 21px;
+        transition: 0.6s;
+      }
+
+      /* Hover effect on social links */
+      .social-links a:hover {
+        color: #0c52a1;
+      }
+
+      h1 {
+        text-transform: capitalize;
+        letter-spacing: 0.3px;
+        font-weight: 700;
+        font-size: clamp(2.9375rem, 2.75rem + 0.75vw, 3rem);
+        background-color: #005baa;
+        background-image: linear-gradient(40deg, #48a7fa, #63b1f5);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        text-align: center;
+        margin-top: -10px; /* Adjust the margin to your preference */
+        margin-bottom: 0px;
+        font-family: "Samarkan", cursive;
+      }
+      /* Media query for adjusting column width on smaller screens */
+      @media screen and (max-width: 48rem) {
+        .col {
+          width: calc(50% - 2rem);
+        }
+      }
+      /* Media query for making columns full width on even smaller screens */
+      @media screen and (max-width: 32rem) {
+        .col {
+          width: 100%;
+          margin: 0 0 9rem 0;
+        }
+      }
+      @media screen and (max-width: 300px) {
+        .profile-card:hover {
+          border-radius: 10px;
+          height: 260px;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .profile-card {
+          padding: 1rem;
+        }
+        .profile-card:hover {
+          border-radius: 10px;
+          height: 280px;
+        }
+        .caption {
+          transform: translateY(-90px);
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .profile-card:hover {
+          border-radius: 10px;
+          height: 300px;
+        }
+        .main {
+          justify-content: flex-end; /* Center cards on smaller screens */
+          padding: 1000px;
+        }
+        .profile-card {
+          width: 70%; /* Adjust the width for smaller screens */
+          margin: 0 0 100px; /* Add margin for spacing between cards */
+          height: 65vw;
+          right: -16%;
+        }
+        .wrapper {
+          width: 90%;
+          margin: 0 auto;
+          max-width: 80rem;
+          text-align: center;
+        }
+      }
+      @media screen and (min-width: 301px) and (max-width: 350px) {
+        .profile-card:hover {
+          border-radius: 10px;
+          height: 240px;
+        }
+      }
+      @media screen and (min-width: 350px) and (max-width: 400px) {
+        .profile-card:hover {
+          border-radius: 10px;
+          height: 280px;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .profile-card {
+          justify-content: flex-start;
+          justify-content: flex-end;
+        }
+        h1 {
+          margin-top: 80px; /* Add some margin to separate the heading from the columns */
+        }
+        h3 {
+          margin-top: 0.75em;
+        }
+        .front {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .col {
+          margin: -0.1rem -0.1rem;
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: 60px;
+        }
+        h1 {
+          margin-bottom: 30px;
+          margin-top: 60px;
+        }
+        h3 {
+          margin-top: -99px; /* Adjust margin-top to move the h3 up */
+          margin-bottom: 0; /* Ensure no extra space below the h3 */
+        }
+      }
+      .l-header {
+        transition: background-color 0.5s, opacity 0.5s;
+      }
+      .nav__menu {
+        opacity: 1;
+      }
+
+      .mycontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .child {
+        width: calc(20% - 2rem);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+      }
+      .img {
+        width: 90%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+      <div class="header-logo">
+        <a class="site-logo" href="index.html">
+          <img src="logo/logo_white_round.png" alt="Homepage" style="height: auto; transform: scale(0.9) translateX(22px)">
+        </a>
+      </div>
+      <!-- end header-logo -->
+
+      <nav class="header-nav">
+        <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+        <div class="header-nav__content">
+          <h3 style="font-size: 15px">Kshamta</h3>
+
+          <ul class="header-nav__list">
+            <li class="current"><a href="index.html" title="home">Home</a></li>
+            <!-- <li><a  class="smoothscroll" href="index.html#about" title="about">About</a></li> -->
+            <li>
+              <a href="sponsorpack.html" title="social fest">Sponsorship Package</a>
+            </li>
+            <li><a href="events.html" title="events">Events</a></li>
+            <li><a href="ngo.html" title="campaigns">Ngo Collaborated</a></li>
+            
+            <li><a href="sponsors.html" title="sponsers">Sponsors</a></li>
+            <li><a href="team24.html" title="team">Team</a></li>
+            <!-- <li><a  class="smoothscroll" href="#contact" title="contact">Contact</a></li> -->
+          </ul>
+
+          <ul class="header-nav__social">
+            <li>
+              <a href="https://x.com/kshamtanmims" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/kshamtasrf?igsh=Y3J0NXJtNXBpeWky" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/kshamta-the-social-responsibility-forum-of-sppsptm-nmims-mumbai/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@kshamtasrf4744?si=8E62BJfIIJJZ-bWF" target="_blank"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- end header-nav__content -->
+      </nav>
+      <!-- end header-nav -->
+
+      <a class="header-menu-toggle" href="#0">
+        <span class="header-menu-icon"></span>
+      </a>
+    </header>
+    <!-- end s-header -->
+
+    <div class="wrapper">
+      <!-- ------Overall--------- -->
+
+      <h1>Executive Board members (Presidents)</h1>
+      <section id="MECHANICAL" class="MECHANICAL">
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-000.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Executive Board Member</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      8146551492
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:gulati.pratham12@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="http://linkedin.com/in/pratham-gulati-769065231" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <h3>Pratham Gulati</h3>
+              </div>
+            </div>
+          </div>
+          <!--New-->
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-001.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Executive Board Member</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9869238290
+                    </h4>
+
+                    <div class="social-links">
+                      <a href="mailto:desaipriyansh09@gmail.com"><i class="fas fa-envelope"></i></a>
+                      
+                    </div>
+                  </div>
+                </div>
+                <h3>Priyansh desai</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--new-->
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-002.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Executive Board Member</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                     
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:: darshinishah1804@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/darshini-shah-6126ab244?utm_source=share&utm_campaign=share_via" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <h3>Darshini shah</h3>
+              </div>
+            </div>
+          </div>
+          <!--New--><!--new-->
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-003.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Executive Board Member</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                     
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:: yuti1582@gmail.com"><i class="fas fa-envelope"></i></a>
+                     
+                    </div>
+                  </div>
+                </div>
+                <h3>Yuti Sarkar</h3>
+              </div>
+            </div>
+          </div>
+          <!--New-->
+      </section>
+
+      <!-- ------Campaigns--------- -->
+      <h1>Marketing HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-004.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Marketing HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                       8104430632
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:jaydeepnor23@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/jaydeep-devji-nor-b5425a307?utm_source=share&utm_campaign=share_via&ut" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <h3>Jaydeep Nor</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-005.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Marketing HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9862676767
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:kaushikagrawal2004@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/kaushik-agrawal2005?utm_source=share&utm_campaign=share_via&ut" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3>Kaushik Agarwal</h3>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-006.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Marketing HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      6358841014
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:heetunadkat24@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="http://www.linkedin.com/in/heet-unadkat" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Heet Unadkat</h3>
+            </div>
+          </div>
+         
+
+      <!-- ------Events & Fellowships--------- -->
+      <h1>Finance HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-007.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Finance HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9820518105
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:jaymehta0204@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/jay-mehta-09a692249?utm_source=share&utm_campaign=share_via&utm_co" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Jay Mehta</h3>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-008.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Finance HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9004512187
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:aditishedge1654@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/aditi-shedge-899919284?utm_source=share&utm_campaign=share_via&utm_c" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Aditi shedge</h3>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-009.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Finance HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9574647898
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:jasminchaudhary57@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/jasmin-chaudhary-684918284?utm_source=share&utm_campaign=share_via&utm" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Jasmin Chaudhary</h3>
+            </div>
+          </div>
+          
+      </section>
+
+      <!-- ------Marketing--------- -->
+       </div>
+      <h1>Public Relations HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-010.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Public relations HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      8657440708
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:nishikasutaria30@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="http://www.linkedin.com/in/nishika-sutaria" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Nishika sutaria</h3>
+            </div>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-011.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Public relations HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9975971544
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:jadhavakansha492@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/akansha-jadhav?utm_source=share&utm_campaign=share_via&utm" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Akansha Jadhav</h3>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-012.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Public relations HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9372276787
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:aadarshini.sriva@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/aadarshinisrivastava?utm_sour" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Aadarshini Srivastava</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------Media & PR--------- -->
+      <h1>Social Media HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-013.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Social Media HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:amashruwala741@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/anoushka-mashruwala?utm_source=share&utm_campaign=share_via" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Anoushka Mashruwala</h3>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-014.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Social Media HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9137401599
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:nirbhayrawal64@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/nirbhay-rawal-967378249?utm_source=share&utm_campaign=share_via" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Nirbhay Rawal</h3>
+            </div>
+          </div>
+
+
+<div class="col" ontouchstart="this.classList.toggle('hover');">
+  <div class="container">
+    <div class="front">
+      <div class="profile-card">
+        <div class="img">
+          <img src="team/dhruvi.jpeg">
+        </div>
+        <div class="caption">
+          <p>Social Media HOD</p>
+          <h4 style="font-family: 'Lato', sans-serif, cursive">
+          
+          </h4>
+          <div class="social-links">
+            <a href="mailto:12desaidhruvi@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/dhruvi-desai-7624bb249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Dhruvi Desai</h3>
+  </div>
+</div>
+</div>
+          
+
+      <!-- ------Web--------- -->
+      <h1>Logistics HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-015.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Logistics HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9289305452
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:itsridhima.bihani@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/ridhima-bihani/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Ridhima Bihani</h3>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-016.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Logistics HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      
+                    </h4>
+
+                    <div class="social-links">
+                      <a href="mailto:varunfromgallifrey@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/varun-nair123?utm_source=share&utm_campaign=share_via&u" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Varun Nair</h3>
+            </div>
+          </div>
+        
+
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front">
+              <div class="profile-card">
+                <div class="img">
+                  <img src="team/kshamta..pdf-image-017.jpg">
+                </div>
+                <div class="caption">
+                  <p>Logistics HOD</p>
+                  <h4 style="font-family: 'Lato', sans-serif, cursive">
+                    
+                  </h4>
+
+                  <div class="social-links">
+                    <a href="mailto:veerandhawan2005@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/veeran-dhawan-b274a0284?utm_source=share&utm_campaign=share_vi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3>Veeran Dhawan</h3>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- ------Competitions--------- -->
+      <h1>Editorial HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-018.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Editorial HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9004882880
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:amaarapundir@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/amaara-pundir?utm_source=share&utm_campaign=share_via&utm_c" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Amaara Pundir</h3>
+            </div>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-019.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Editorial HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9227788333
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:fatimahkazi14@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="http://linkedin.com/in/fatimah-kazi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Fatima Kazi</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------Operations--------- -->
+      <h1>Hospitality HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-020.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Hospitality HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9950680405
+                    </h4>
+                    <div class="social-links">
+                      <a href="https://www.linkedin.com/in/anshika-bhargava-37b595283?utm_source=share&utm_campaign=share_via&ut" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Anishka Bhargava</h3>
+            </div>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-021.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Hospitality HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9321815417
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:navleen.malhotra05@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/navleen-malhotra?utm_source=share&utm_campaign=share_via&utm" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Navleen Malhotra</h3>
+            </div>
+          </div>
+        
+
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front">
+              <div class="profile-card">
+                <div class="img">
+                  <img src="team/kshamta..pdf-image-022.jpg">
+                </div>
+                <div class="caption">
+                  <p>Hospitality HOD</p>
+                  <h4 style="font-family: 'Lato', sans-serif, cursive">
+                    
+                  </h4>
+                  <div class="social-links">
+                    <a href="mailto:anshchintamaneni214@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ansh-chintamaneni-a098b6249?utm_source=share&utm_campaign=share_via&" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3>Ansh Chintamaneni</h3>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- ------Creatives--------- -->
+      <h1>Photography Admin</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-023.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Photography Admin</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      7710987541
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:dalpreetkaurm@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/dalpreet-kaur-matharu-20111b249?utm_source=share&utm_campaign=share_via" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Dalpreet Kaur Matharu</h3>
+            </div>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-024.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Photography Admin</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      9610005883
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:trisha.rajawat14@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/trisha-rajawat?utm_source=share&utm_campaign=share_via&ut" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Trisha Rajawat</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------Admin--------- -->
+      <h1>Admin HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-025.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Admin HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      8767674075
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:bhatiaanushka52@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/anushka-bhatia-2a9a14256" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Anushka Bhatia</h3>
+            </div>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-026.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Admin HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                    </h4>
+                    <div class="social-links">
+                      <a href="https://www.linkedin.com/in/bhumika-raorane-78a581249?utm_source=share&utm_campaign=share_via&utm" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Bhumika Raorane</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------cREATIVES--------- -->
+      <h1>Creatives HOD</h1>
+      <section>
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-027.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Creatives HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      7506085547
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:riyashetty49@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/riya-shetty-?utm_source=share&utm_campaign=share_via&utm_content" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Riya Shetty</h3>
+            </div>
+          </div>
+
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front">
+                <div class="profile-card">
+                  <div class="img">
+                    <img src="team/kshamta..pdf-image-028.jpg">
+                  </div>
+                  <div class="caption">
+                    <p>Creatives HOD</p>
+                    <h4 style="font-family: 'Lato', sans-serif, cursive">
+                      7738726744
+                    </h4>
+                    <div class="social-links">
+                      <a href="mailto:ramnathsuramya@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/suramya-ramnath-302736249" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Suramya Ramnath</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader">
+        <img src="images/untitled%20%285%29_animated.svg" alt="" style="height: 100px">
+        <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+      </div>
+    </div>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/owl.js"></script>
+  
+
+</body></html>
