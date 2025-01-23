@@ -121,6 +121,30 @@
           box-shadow: 0px 0px 16px 2px #2196f3;
         }
       }
+      .featured-text {
+  background-color: rgba(224, 247, 250, 0.9); /* Light blue background */
+  padding: 2vw 4vw; /* Responsive padding */
+  text-align: center; /* Center the text */
+  font-size: 2vw; /* Responsive font size */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Text color */
+  position: relative; /* Positioning for sliding effect */
+  overflow: hidden; /* Hide overflow */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  animation: slide 10s linear infinite; /* Animation for sliding */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.featured-text:hover {
+  background-color: rgba(224, 247, 250, 1); /* Change background on hover */
+}
+
+@keyframes slide {
+  0% { transform: translateX(100%); }
+  50% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
     </style>
   </head>
 
@@ -153,6 +177,7 @@
             <li><a href="ngo.html" title="campaigns">NGO Collaborated</a></li>
             
             <li><a href="sponsors.html" title="sponsers">Sponsors</a></li>
+            <li><a href="departments.html" title="sponsers">Departments</a></li>
             <li><a href="team24.html" title="team">Team</a></li>
             <li>
               <a class="smoothscroll" href="#contact" title="contact">Contact</a>
@@ -174,6 +199,7 @@
               <a href="https://youtube.com/@kshamtasrf4744?si=8E62BJfIIJJZ-bWF" target="_blank"><i class="fab fa-youtube"></i></a>
             </li>
           </ul>
+          
         </div>
         <!-- end header-nav__content -->
       </nav>
@@ -242,14 +268,23 @@
         <span class="home-scroll__text">Scroll Down</span>
         <span class="home-scroll__icon"></span>
       </a>
+
       <!-- end home-scroll -->
     </section>
+    
     <!-- end s-home -->
 
     <!-- about
     ================================================== -->
     <section id="about" class="s-about" style="background-color: white; background-image: url(images/bg123.png)">
       <div class="row section-header" data-aos="fade-up">
+        <div class="featured-text" onclick="window.location.href='magazine.html';">
+          <p>Featured in Stylesheet Magazine</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="col-full">
           <h3 class="subhead">Who We Are</h3>
           <h1 class="display-1">About Us</h1>
